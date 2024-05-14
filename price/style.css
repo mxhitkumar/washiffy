@@ -14,7 +14,7 @@
             font-weight: 700;
             line-height: 1em;
             text-align: center;
-            color: #4DC3FA;
+            color: #f1b262;
         }
 
         h2 {
@@ -28,22 +28,19 @@
         }
 
         h2 a {
-            font-weight: 700;
+            font-weight: bold;
             text-transform: uppercase;
             color: #FB667A;
             text-decoration: none;
         }
 
-        .container caption{
-            /* align-items: left; */
+        .container thead tr th h1 {
+            text-transform: uppercase;
         }
 
-        .blue {
-            color: #185875;
-        }
-
-        .yellow {
-            color: #FFF842;
+        .container caption {
+            font-weight: bold;
+            font-size: 35px;
         }
 
         .container th h1 {
