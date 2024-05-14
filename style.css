@@ -1,12 +1,80 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700');
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
 
-* {
+html,
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   font-family: "Poppins", sans-serif;
+}
+
+/*--------------------------------
+GLOBAL
+---------------------------------*/
+
+
+p {
+  color: #767676;
+  line-height: 23px;
+  /* font-family: 'Nunito', sans-serif; */
+}
+
+.btn {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  background-color: #daa37f;
+  border-radius: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn--opacity {
+  animation: opacity 3s;
+}
+
+.sect {
+  padding: 130px 0;
+}
+
+.sect--brown {
+  background-color: #1d140b;
+}
+
+.sect--grey {
+  background-color: #ebebeb;
+}
+
+.sect--no-bottom {
+  padding-bottom: 0;
+}
+
+.sect--white-text {
+  color: #fff;
+}
+
+.col--inbl {
+  display: inline-block;
+  float: none;
+}
+
+.row--center {
+  text-align: center;
+
+}
+
+.row--small {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.row--margin {
+  margin-top: 65px;
 }
 
 .hero {
@@ -113,6 +181,47 @@ nav ul li a:hover{
   size: 100px;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  nav {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  nav ul li {
+    margin-left: 20px; /* Reduce margin between navigation items */
+  }
+
+  .content h1 {
+    font-size: 100px; /* Decrease font size for smaller screens */
+  }
+
+  .content a {
+    font-size: 18px; /* Decrease button font size for smaller screens */
+    padding: 10px 40px; /* Adjust button padding for smaller screens */
+  }
+
+  .banner__scroll-down {
+    bottom: 10px; /* Adjust scroll-down button position */
+  }
+}
+
+
+/* ---------------------
+HOME DELIVERY
+---------------------- */
+
+.van_image {
+  background-image: url("images/van.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+}
+
+
 /* ====================================== HALF image0====================================== */
 .half-sect__second {
   background-image: url("images/DryCleanClothes.jpg");
@@ -187,126 +296,111 @@ nav ul li a:hover{
   /* background-attachment: fixed; */
     background-color:#fff;
 }
-/* ---------------------shoe half image--------------------- */
 
-.shoe_half-sect__second {
-  background-image: url("images/dirtyShoe.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #fff;
-}
-
-.half {
-  width: 50%;
-  display: table-cell;
-  background-color: #fff;
-}
-
-.shoe_half-sect__first {
-  padding: 150px;
-  background-color: #fff;
-}
-
-.shoe_description__p {
-  margin-bottom: 40px;
-}
-
-.shoe_description__title {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-/* -------------------------------tips container -------------------- */
-
-.card-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 940px;
-  grid-gap: 20px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.card{
-  width: 300px;
-  border-radius: 10px;
+/* ====================SERVICE =================== */
+ .article-pre {
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 
-.card .card-body{
-  margin-top: -5px;
-  width: 100%;
-  padding: 20px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 275px;
+.article-pre__img {
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  height: 200px;
 }
 
-.card-header img{
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+.article-pre:hover .article-pre__img {
+  filter: blur(5px);
 }
 
-.card .card-body .tag{
-  padding: 2px 10px;
-  background-color: royalblue;
-  font-size: 12px;
-  margin: 0;
-  color: #fff;
-  border-radius: 50px;
+.article-pre__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 10px;
   text-transform: uppercase;
+  font-size: 28px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.card .card-body .tag.tag-travel{
-  background-color: #8e44ad;
+.article-pre:hover .article-pre__text {
+  opacity: 1;
 }
 
-.card .card-body p{
-  font-size: 13px;
-  margin: 0 0 40px;
+
+/*--------------------------------
+TIPS AND TRICKS
+---------------------------------*/
+
+.sect__title {
+  margin-top: 0;
+  text-transform: uppercase;
+  line-height: 40px;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
-h4{
-  margin: 10px 0;
+.last-articles {
+  margin-top: 50px;
 }
 
-.card .card-user{
-  display: flex;
-  align-items: center;
-  margin-top: auto;
-}
-
-.card-user img{
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 40px;
-  margin-right: 10px;
-}
-
-.card-user small{
-  color: #888;
-}
-
-@media screen and (max-width: 960px){
-  .container{
-      grid-template-columns: 1fr;
-      justify-content: center;
-  }
-}
-/* ============================= */
-
-.deleviry-half-sect__second {
-  background-image: url("images/van.svg");
+.article-pre__img {
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 2000px;
+  padding-bottom: 80%;
+}
+
+.article-pre {
   background-color: #fff;
+}
+
+.article-pre__title {
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.article-pre__date {
+  color: #767676;
+  line-height: 23px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+}
+
+.article-pre__info {
+  padding: 25px 20px 20px 20px;
+}
+
+.article-pre__ex {
+  margin: 0;
+  line-height: 22px;
+}
+
+.article-pre-1 .article-pre__img {
+  background-image: url("images/blog/Sorting.jpg");
+}
+
+.article-pre-2 .article-pre__img {
+  background-image: url("images/blog/stain.jpg");
+}
+
+.article-pre-3 .article-pre__img {
+  background-image: url("images/blog/dryingClothes.jpg");
 }
 
 
@@ -361,7 +455,225 @@ h4{
   font-size: 18;
 }
 
-/*-------------------- WHATSAPP ICON ------------------------------------------------------- */
+
+/*--------------------------------
+RESPONSIVE
+---------------------------------*/
+
+@media screen and (max-width:1024px) {
+  .sect {
+    padding: 100px 0;
+  }
+
+  .row--margin {
+    margin-top: 55px;
+  }
+
+  .banner__title {
+    font-size: 54px;
+  }
+
+  .half-sect__first {
+    padding: 100px;
+
+  }
+
+  .three-img__img {
+    padding-bottom: 40%;
+  }
+
+  .sect--no-bottom {
+    padding-bottom: 0px !important;
+  }
+
+  .footer__half {
+    padding: 90px 120px;
+  }
+
+  .sect-t-footer {
+    display: none;
+  }
+
+  .footer {
+    position: relative;
+  }
+}
+
+
+@media screen and (max-width:991px) {
+  .sect {
+    padding: 80px 0;
+  }
+
+  .banner__title {
+    font-size: 50px;
+  }
+
+  .row--margin {
+    margin-top: 45px;
+  }
+
+  .coffee {
+    padding: 0 15px;
+  }
+
+  .coffe__img {
+    width: 100%;
+  }
+
+  .half-sect__first {
+    padding: 80px;
+  }
+
+  .last-articles {
+    margin-bottom: 30px;
+  }
+
+  .sect__title,
+  .description__title,
+  .footer__big-title {
+    line-height: 38px;
+    font-size: 28px;
+  }
+
+  .footer__half {
+    padding: 60px 90px;
+  }
+
+}
+
+@media screen and (max-width:767px) {
+  .banner__title {
+    font-size: 48px;
+  }
+
+  .three-img {
+    height: auto;
+  }
+
+  .sect {
+    padding: 60px 0;
+  }
+
+  .row--margin {
+    margin-top: 30px;
+  }
+
+  .coffee {
+    margin-bottom: 30px;
+  }
+
+  .coffee__img {
+    width: 35%;
+  }
+
+  .coffee__descr,
+  .sect__subtitle {
+    padding: 0 50px;
+  }
+
+  .sect__title,
+  .description__title,
+  .footer__big-title {
+    line-height: 36px;
+    font-size: 26px;
+  }
+
+  .half-sect__first {
+    padding: 50px;
+  }
+
+  .article-pre {
+    margin-bottom: 15px;
+  }
+
+  .footer__half {
+    width: 100%;
+    display: block;
+    padding: 50px 50px;
+  }
+
+  .half-sect {
+    display: block;
+    height: auto;
+  }
+
+  .half {
+    width: 100%;
+    display: block;
+  }
+
+  .half-sect__second {
+    padding-bottom: 60%;
+  }
+
+
+}
+
+@media screen and (max-width:480px) {
+  .banner__title {
+    font-size: 44px;
+  }
+
+  .sect {
+    padding: 50px 0;
+  }
+
+  .sect__title,
+  .description__title {
+    line-height: 30px;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .sect__subtitle {
+    padding: 0;
+  }
+
+  .coffee__img {
+    width: 65%;
+  }
+
+  .coffee__descr,
+  .sect__subtitle {
+    padding: 0 15px;
+  }
+
+  .best--margin {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .row--margin {
+    margin-top: 15px;
+  }
+
+  .best__img {
+    width: 44px;
+  }
+
+  .best__title {
+    margin-top: 15px;
+  }
+
+  .three-img__img {
+    padding-bottom: 60%;
+    width: 100%;
+  }
+
+  .footer__half {
+    padding: 35px 35px;
+  }
+
+  .footer__desc {
+    margin-bottom: 10px;
+  }
+
+}
+
+
+
+/*-------------------- WHATSAPP ICON -------------------------------- */
 
 .hidden {
   display: none;
@@ -562,47 +874,4 @@ h4{
   bottom: 90px;
   opacity: 1;
   visibility: visible;
-}
-
-/* ====================our services =================== */
-
-
-.card-deck {
-  margin: 0 -15px;
-  display: flex;
-  padding:40px 0px ;
-  justify-content: space-between;
-}
-
-.card-deck .card {
-  margin: 0 0 1rem;
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .card-deck .card {
-    -ms-flex: 0 0 48.7%;
-    flex: 0 0 48.7%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .card-deck .card {
-    -ms-flex: 0 0 32%;
-    flex: 0 0 32%;
-  }
-}
-
-@media (min-width: 992px)
-{
-  .card-deck .card {
-    -ms-flex: 0 0 24%;
-    flex: 0 0 24%;
-  }
-}
-
-.card-img-top {
-  height: 250px;
-  object-fit: cover;
-  object-position: center center;
-  width: 100%;
 }

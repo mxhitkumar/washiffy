@@ -5,17 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Washiffy</title>
-  <link rel="icon" href="images/favicon.ico" type="image/png">
+  <link rel="icon" href="images/favicon.ico" type="image/png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet" />
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
+  <!-- -------------------------
+  HEADER
+  ------------------------- -->
+
   <div class="hero">
     <video autoplay loop muted plays-inline class="back-video">
       <source src="images/video.mp4" type="video/mp4" />
@@ -23,29 +27,31 @@
     <nav>
       <img src="images/logo.png" alt="logo" class="logo" />
       <ul>
-        <!-- <li><a href="#">Home</a></li> -->
-        <!-- <li><a href="#footer">Contact Us</a></li> -->
-        <li><a href="images/Washiffy_Pricing.pdf" download="Washiffy_Pricing">PRICING</a></li>
+        <li>
+          <a href="pricing/index.html">HOME</a>
+          <a href=".footer">CONTACT</a>
+          <a href="pricing/index.html">PRICING</a>
+        </li>
       </ul>
     </nav>
     <div class="content">
       <h1>Washiffy</h1>
       <a href="#half-sect">EXPLORE</a>
     </div>
-    <img class="banner__scroll-down"
-      src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiNGRkZGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=" />
+    <img class="banner__scroll-down" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiNGRkZGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=" />
   </div>
 
   <!-- HALF IMAGE -->
 
-  <div class="half-sect" id="half-sect">
+  <div class="half-sect">
     <div class="half half-sect__first">
       <div class="description">
         <h2 class="description__title">Say Goodbye to Stains!</h2>
         <p class="description__p">
-          "Keep your favorite shirt pristine without the hassle of stains. Our services include laundry, dry cleaning,
-          and ironing, all tailored to suit your lifestyle and schedule. Say goodbye to laundry worries and hello to
-          impeccable clothing!"
+          "Keep your favorite shirt pristine without the hassle of stains. Our
+          services include laundry, dry cleaning, and ironing, all tailored to
+          suit your lifestyle and schedule. Say goodbye to laundry worries and
+          hello to impeccable clothing!"
         </p>
         <!-- <a href="#" class="btn">Learn more</a> -->
       </div>
@@ -60,16 +66,21 @@
     <div class="col-md-4 col-xs-4 col-sm-4 three-img__img three-img--2"></div>
     <div class="col-md-4 col-xs-4 col-sm-4 three-img__img three-img--3"></div>
   </div>
+
   <!-- -----------------------------Protecting Garments ------------------------------------------ -->
   <div class="sect sect--great">
     <div class="container">
       <div class="row">
         <div class="col-md-5 col-sm-7 col-sm-offset-4 col-md-offset-6">
           <div class="description">
-            <h2 class="description__title">Protecting Garments and Skin, Naturally.</h2>
+            <h2 class="description__title">
+              Protecting Garments and Skin, Naturally.
+            </h2>
             <p class="description__p">
-              Experience the gentle yet effective cleaning power of our eco-friendly, skin-safe chemicals tailored to
-              preserve your garments and your skin's well-being.</p>
+              Experience the gentle yet effective cleaning power of our
+              eco-friendly, skin-safe chemicals tailored to preserve your
+              garments and your skin's well-being.
+            </p>
             <!-- <a href="#" class="btn">Learn more</a> -->
           </div>
         </div>
@@ -77,33 +88,57 @@
     </div>
   </div>
 
-  <!-- ================our service================ -->
+  <!-- ================SERVICE================ -->
 
-  <div class="container" style="margin-top: 20px;">
-    <h3 style="text-align: center;">Services</h3>
-    <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src="images/Services/dry_clean.jpg" alt="Dry Cleaning">
-        <div class="card-name">
-          <h4 style="text-align: center;">Dry Cleaning</h4>
+  <div class="sect blog sect--grey">
+    <div class="container">
+      <div class="row row--center">
+        <h1 class="sect__title">SERVICES</h1>
+      </div>
+
+      <div class="row last-articles">
+        <div class="col-md-4 col-sm-4">
+          <div class="article-pre article-pre-4">
+            <div class="article-pre__img" style="background-image: url('images/Services/dry_clean.jpg');"></div>
+              <div class="article-pre__text">Dry Cleaning</div>            
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4">
+          <div class="article-pre article-pre-5">
+            <div class="article-pre__img" style="background-image: url('images/Services/laundry.jpg');"></div>
+            <div class="article-pre__text">Laundry</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4">
+          <div class="article-pre article-pre-6">
+            <div class="article-pre__img" style="background-image: url('images/Services/shoes.jpg');"></div>
+            <div class="article-pre__text">Shoe Cleaning</div>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img class="card-img-top" src="images/Services/laundry.jpg" alt="Laundry">
-        <div class="card-name">
-          <h4 style="text-align: center;">Laundry</h4>
+
+      <div class="row last-articles">
+        <div class="col-md-4 col-sm-4">
+          <div class="article-pre article-pre-7">
+            <div class="article-pre__img" style="background-image: url('images/Services/steam-press.jpg');"></div>
+            <div class="article-pre__text">Steam Press</div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="images/Services/steam-press.jpg" alt="Steam Press">
-        <div class="card-name">
-          <h4 style="text-align: center;">Steam Press</h4>
+
+        <div class="col-md-4 col-sm-4">
+          <div class="article-pre article-pre-8">
+            <div class="article-pre__img" style="background-image: url('images/Services/bag.jpg');"></div>
+            <div class="article-pre__text">Bag Cleaning</div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="images/Services/shoes.jpg" alt="Shoe Cleaning">
-        <div class="card-name">
-          <h4 style="text-align: center;">Shoe Cleaning</h4>
+
+        <div class="col-md-4 col-sm-4">
+          <div class="article-pre article-pre-9">
+            <div class="article-pre__img" style="background-image: url('images/Services/houseHold.jpg');"></div>
+            <div class="article-pre__text">Household Cleaning</div>
+          </div>
         </div>
       </div>
     </div>
@@ -112,78 +147,95 @@
   <!-- -------------------SHOES---------------------------- -->
 
   <div class="half-sect">
-    <div class="half shoe_half-sect__first">
+    <div class="half half-sect__first">
       <div class="description">
-        <h2 class="shoe_description__title">Step Out Confidently in Freshness</h2>
-        <p class="shoe_description__p">
-          "Experience the Expert Touch in Shoe Cleaning: From meticulous dirt removal to gentle drying, our specialized
-          process ensures your shoes regain their freshness and quality. Say hello to revitalized footwear!"
+        <h2 class="description__title">Step Out Confidently in Freshness</h2>
+        <p class="description__p">
+          "Experience the Expert Touch in Shoe Cleaning: From meticulous dirt
+          removal to gentle drying, our specialized process ensures your shoes
+          regain their freshness and quality. Say hello to revitalized
+          footwear!"
         </p>
         <!-- <a href="#" class="btn">Learn more</a> -->
       </div>
     </div>
-    <div class="half shoe_half-sect__second"></div>
+    <div class="half half-sect__second" style="background-image: url(images/dirtyShoe.jpg)"></div>
   </div>
 
+  <!-- -----------------------TIPS & TRICKS---------------------- -->
 
+  <div class="sect blog sect--grey">
+    <div class="container">
+      <div class="row row--center">
+        <h1 class="sect__title">TIPS and TRICKS</h1>
+      </div>
+      <div class="row last-articles">
+        <div class="col-md-4 col-sm-4">
+          <div class="article-pre article-pre-1">
+            <div class="article-pre__img"></div>
+            <div class="article-pre__info">
+              <h1 class="article-pre__title">
+                Efficient Sorting for Cleaner Loads
+              </h1>
+              <p class="article-pre__ex">
+                Begin by sorting your laundry into separate piles based on
+                color, fabric type, and level of dirtiness. This practice not
+                only prevents color bleeding but also ensures each load gets
+                the right treatment for optimal cleanliness.
+              </p>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-md-4 col-sm-4">
+          <div class="article-pre article-pre-2">
+            <div class="article-pre__img"></div>
+            <div class="article-pre__info">
+              <h1 class="article-pre__title">
+                The Power of Pre-Treating Stains
+              </h1>
+              <p class="article-pre__ex">
+                Pre-treating stains before washing can make a significant
+                difference in their removal. Use a stain remover or a mixture
+                of water and detergent to treat stains promptly. Allow it to
+                sit for a few minutes before washing for best results.
+              </p>
+            </div>
+          </div>
+        </div>
 
-
-  <!-- -----------------------tips card---------------------- -->
-  <div class="tips">
-    <h3 style="text-align: center;">Tips</h3>
+        <div class="col-md-4 col-sm-4">
+          <div class="article-pre article-pre-3">
+            <div class="article-pre__img"></div>
+            <div class="article-pre__info">
+              <h1 class="article-pre__title">Maximizing Drying Efficiency</h1>
+              <p class="article-pre__ex">
+                To speed up drying time and save energy, consider using dryer
+                balls or clean tennis balls in the dryer. They help to
+                separate clothes, reduce wrinkles, and improve airflow,
+                resulting in faster and more efficient drying cycles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row--margin row--center"></div>
+    </div>
   </div>
-  <div class="card-container">
-    <div class="card">
-      <div class="card-header">
-        <img src="images/blog/Sorting.jpg" alt="clothes Sorting">
-      </div>
-      <div class="card-body">
-        <h4>Efficient Sorting for Cleaner Loads</h4>
-        <p>Begin by sorting your laundry into separate piles based on color, fabric type, and level of dirtiness. This
-          practice not only prevents color bleeding but also ensures each load gets the right treatment for optimal
-          cleanliness.</p>
 
-      </div>
-    </div>
+  <!-- ============DELIVERY=============== -->
 
-    <div class="card">
-      <div class="card-header">
-        <img src="images/blog/stain.jpg" alt="Stain Image">
-      </div>
-      <div class="card-body">
-        <h4>The Power of Pre-Treating Stains</h4>
-        <p>Pre-treating stains before washing can make a significant difference in their removal. Use a stain remover or
-          a mixture of water and detergent to treat stains promptly. Allow it to sit for a few minutes before washing
-          for best results.</p>
-
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        <img src="images/blog/dryingClothes.jpg" alt="Drying clothes Image">
-      </div>
-      <div class="card-body">
-        <h4>Maximizing Drying Efficiency</h4>
-        <p>To speed up drying time and save energy, consider using dryer balls or clean tennis balls in the dryer. They
-          help to separate clothes, reduce wrinkles, and improve airflow, resulting in faster and more efficient drying
-          cycles.</p>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ============dilivery =============== -->
-
-  <div class="half-sect" id="half-sect">
-    <div class="half deleviry-half-sect__second"></div>
+  <div class="half-sect">
+    <div class="half half-sect__second" style="background-image: url(images/van.png); background-size: 1300px"></div>
     <div class="half half-sect__first">
       <div class="description">
-        <h2 class="description__title">Revolutionizing Laundry and Dry Cleaning for Tomorrow.</h2>
+        <h2 class="description__title">
+          Revolutionizing Laundry and Dry Cleaning for Tomorrow.
+        </h2>
         <p class="description__p">
-          "Enjoy the convenience of doorstep delivery! Our reliable service brings fresh laundry right to your home,
-          ensuring a hassle-free experience. Experience the ease of laundry with us today!"
+          "Enjoy the convenience of doorstep delivery! Our reliable service
+          brings fresh laundry right to your home, ensuring a hassle-free
+          experience. Experience the ease of laundry with us today!"
         </p>
         <span>FREE HOME DELIVERY*</span>
       </div>
@@ -241,10 +293,13 @@
           <path
             d="M8,30a1,1,0,0,1-.42-.09A1,1,0,0,1,7,29V25.74a8,8,0,0,1-1.28-15,1,1,0,1,1,.82,1.82,6,6,0,0,0,1.6,11.4,1,1,0,0,1,.86,1v1.94l3.16-2.63A1,1,0,0,1,12.8,24H15a5.94,5.94,0,0,0,4.29-1.82,1,1,0,0,1,1.44,1.4A8,8,0,0,1,15,26H13.16L8.64,29.77A1,1,0,0,1,8,30Z" />
         </svg>
-        <div class="title">Please chat with our team <span>An admin will respond within a few minutes.</span>
+        <div class="title">
+          Please chat with our team
+          <span>An admin will respond within a few minutes.</span>
         </div>
       </div>
-      <div class="chat-text"><span>Hello, is there anything we can assist you with?</span>
+      <div class="chat-text">
+        <span>Hello, is there anything we can assist you with?</span>
         <span class="typing">
           <svg viewBox="0 0 512 512">
             <circle cx="256" cy="256" r="48"></circle>
@@ -263,6 +318,7 @@
       </svg>
     </a>
   </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script>
     // Opens sticky-chat automatically within 5 seconds of page load
@@ -272,19 +328,18 @@
       }, 5000);
     });
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
         e.preventDefault();
 
-        const sectionId = this.getAttribute('href').substring(1);
+        const sectionId = this.getAttribute("href").substring(1);
         const section = document.getElementById(sectionId);
 
         if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
+          section.scrollIntoView({ behavior: "smooth" });
         }
       });
     });
-
   </script>
 </body>
 
