@@ -9,6 +9,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 /*--------------------------------
@@ -76,6 +77,77 @@ p {
 .row--margin {
   margin-top: 65px;
 }
+
+
+/*--------------------------------
+BANNER
+---------------------------------*/
+.banner {
+  /* background-image: url('https://image.ibb.co/meT7Jb/header_bg_1.jpg'); */
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: banner-in 2s;
+}
+
+.banner__container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.banner__scroll-down {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -12px;
+  cursor: pointer;
+  animation: opacity 3s;
+}
+
+.banner__title {
+  font-size: 160px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+  /* font-size: 56px;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  animation: opacity 3s; */
+}
+
+.banner__title:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+
+.banner__text {
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 18px;
+  animation: opacity 3s;
+}
+
+/* ---------------------------- */
 
 .hero {
   width: 100%;
@@ -253,12 +325,6 @@ HOME DELIVERY
 
 /* ------------------------------------------------THREE IMAGES --------------------------------------------- */
 
-.three-img {
-  display: table;
-  height: 33.3%;
-  width: 100%;
-}
-
 .three-img__img {
   height: 0;
   padding-bottom: 33.3%;
@@ -274,15 +340,15 @@ HOME DELIVERY
 }
 
 .three-img--1 {
-  background-image: url(images/threeImage/image1.jpg);
+  background-image: url('images/threeImage/image1.jpg');
 }
 
 .three-img--2 {
-  background-image: url("images/threeImage/image2.jpg");
+  background-image: url('images/threeImage/image2.jpg');
 }
 
 .three-img--3 {
-  background-image: url("images/threeImage/image3.jpg");
+  background-image: url('images/threeImage/image3.jpg');
 }
 
 /* ============Protecting Garments and Skin, Naturally.============== */
@@ -506,7 +572,7 @@ RESPONSIVE
   }
 
   .banner__title {
-    font-size: 50px;
+    font-size: 120px;
   }
 
   .row--margin {
@@ -544,7 +610,7 @@ RESPONSIVE
 
 @media screen and (max-width:767px) {
   .banner__title {
-    font-size: 48px;
+    font-size: 100px;
   }
 
   .three-img {
@@ -612,7 +678,7 @@ RESPONSIVE
 
 @media screen and (max-width:480px) {
   .banner__title {
-    font-size: 44px;
+    font-size: 70px;
   }
 
   .sect {
@@ -675,203 +741,49 @@ RESPONSIVE
 
 /*-------------------- WHATSAPP ICON -------------------------------- */
 
-.hidden {
-  display: none;
-}
-
-.sticky-button {
+.whatsapp-btn {
   position: fixed;
-  background-color: #25d366;
   bottom: 20px;
   right: 20px;
-  border-radius: 50px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-  z-index: 20;
-  overflow: hidden;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 55px;
-  height: 55px;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: breathe 2s ease-in-out infinite;
 }
 
-.sticky-button svg {
-  margin: auto;
-  fill: #fff;
-  width: 35px;
-  height: 35px;
-}
-
-.sticky-button a,
-.sticky-button label {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  width: 55px;
-  height: 55px;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.sticky-button label svg.close-icon {
-  display: none;
-}
-
-.sticky-chat {
-  position: fixed;
-  bottom: 70px;
-  right: 20px;
-  width: 320px;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  z-index: 21;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.sticky-chat a {
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  color: #505050;
-}
-
-.sticky-chat svg {
-  width: 35px;
-  height: 35px;
-}
-
-.sticky-chat .chat-content {
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
-.sticky-chat .chat-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #25d366;
-  overflow: hidden;
-}
-
-.sticky-chat .chat-header:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 80px;
-  height: 75px;
-  background: rgba(0, 0, 0, 0.04);
-  border-radius: 70px 0 5px 0;
-}
-
-.sticky-chat .chat-header svg {
-  width: 35px;
-  height: 35px;
-  flex: 0 0 auto;
-  fill: #fff;
-}
-
-.sticky-chat .chat-header .title {
-  padding-left: 15px;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: "Roboto", sans-serif;
+.whatsapp-btn i {
   color: #fff;
+  font-size: 24px;
+  animation: beat 2s ease-in-out infinite;
+  text-decoration: none;
 }
 
-.sticky-chat .chat-header .title span {
-  font-size: 11px;
-  font-weight: 400;
-  display: block;
-  line-height: 1.58em;
-  margin: 0;
-  color: #f4f4f4;
+@keyframes breathe {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
 
-.sticky-chat .chat-text {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 30px 20px;
-  font-size: 12px;
-}
-
-.sticky-chat .chat-text span {
-  display: inline-block;
-  margin-right: auto;
-  padding: 10px;
-  background-color: #f0f5fb;
-  border-radius: 0px 15px 15px;
-}
-
-.sticky-chat .chat-text span:after {
-  content: "just now";
-  display: inline-block;
-  margin-left: 2px;
-  font-size: 9px;
-  color: #989b9f;
-}
-
-.sticky-chat .chat-text span.typing {
-  margin: 15px 0 0 auto;
-  padding: 10px;
-  border-radius: 15px 0px 15px 15px;
-}
-
-.sticky-chat .chat-text span.typing:after {
-  display: none;
-}
-
-.sticky-chat .chat-text span.typing svg {
-  height: 13px;
-  fill: #505050;
-}
-
-.sticky-chat .chat-button {
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-  padding: 12px 20px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
-.sticky-chat .chat-button svg {
-  width: 20px;
-  height: 20px;
-  fill: #505050;
-  margin-left: auto;
-  transform: rotate(40deg);
-  -webkit-transform: rotate(40deg);
-}
-
-.chat-menu:checked + .sticky-button label {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-}
-
-.chat-menu:checked + .sticky-button label svg.chat-icon {
-  display: none;
-}
-
-.chat-menu:checked + .sticky-button label svg.close-icon {
-  display: table-cell;
-}
-
-.chat-menu:checked + .sticky-button + .sticky-chat {
-  bottom: 90px;
-  opacity: 1;
-  visibility: visible;
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
