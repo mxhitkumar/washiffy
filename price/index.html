@@ -8,15 +8,22 @@
   <title>Washiffy-Pricing</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container" >
-    <!-- <span> <img src="../images/logo.png" alt=""></span> -->
-    <h1>Washiffy Pricing</h1>
+  <div class="container">
+    <div class="button-row button-row3">
+      <a href="#men" class="button is-active">Men</a>
+      <a href="#woman" class="button">Woman</a>
+      <a href="#general" class="button">General</a>
+      <a href="#leatherCare" class="button">Leather Care</a>
+      <a href="#houseHold" class="button">House Hold</a>
+      <a href="#shoes" class="button">Shoes</a>
+      <a href="#starch" class="button">Starch</a>
+    </div>
 
+    <h1 style="margin-top: 70px;">Washiffy Pricing</h1>
 
     <div class="line" style="border: 1px solid #f1b262; padding: 20px;">
-      <table class="container">
+      <table class="container" id="men">
         <caption class="hr-text" data-content="MAN"></caption>
         <thead>
           <tr>
@@ -92,7 +99,7 @@
 
 
       <!-- ==========WOMAN========== -->
-      <table class="container">
+      <table class="container" id="woman">
         <caption class="hr-text" data-content="WOMAN"></caption>
         <thead>
           <tr>
@@ -318,7 +325,7 @@
 
 
       <!-- =========GENERAL============ -->
-      <table class="container">
+      <table class="container" id="general">
         <caption class="hr-text" data-content="GENERAL"></caption>
         <thead>
           <tr>
@@ -424,7 +431,7 @@
 
 
       <!-- ======LEATHER CARE=========== -->
-      <table class="container">
+      <table class="container" id="leatherCare">
         <caption class="hr-text" data-content="LEATHER CARE"></caption>
         <thead>
           <tr>
@@ -485,7 +492,7 @@
 
 
       <!-- =======HOUSEHOLD============= -->
-      <table class="container">
+      <table class="container" id="houseHold">
         <caption class="hr-text" data-content="HOUSEHOLD"></caption>
         <thead>
           <tr>
@@ -596,7 +603,7 @@
 
 
       <!-- ============SHOES=============== -->
-      <table class="container">
+      <table class="container" id="shoes">
         <caption class="hr-text" data-content="SHOES"></caption>
         <thead>
           <tr>
@@ -643,7 +650,7 @@
 
       <!-- ======STARCH========= -->
 
-      <table class="container">
+      <table class="container" id="starch">
         <caption class="hr-text" data-content="STARCH"></caption>
         <thead>
           <tr>
@@ -693,6 +700,35 @@
       </table>
     </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').animate({
+          scrollTop: $target.offset().top
+        }, 1200, function () {
+          // When done, add hash to the URL (default click behavior)
+          window.location.hash = target;
+        });
+      });
+    });
+
+    var $buttonRow3 = $('.button-row3');
+    var $activeButton3 = $buttonRow3.find('.button.is-active');
+
+    $buttonRow3.on('click', '.button', function (event) {
+      $activeButton3.removeClass('is-active');
+      $activeButton3 = $(this);
+      $activeButton3.addClass('is-active');
+    });
+
+  </script>
 
 </body>
 
