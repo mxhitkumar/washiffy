@@ -31,6 +31,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;    
+    position: sticky;
+    top: 0; /* adjust the top value as needed */
+    z-index: 1; /* adjust the z-index value as needed */
   }
 
 
